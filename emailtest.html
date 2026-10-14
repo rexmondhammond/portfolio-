@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><title>Email test</title>
+<style>body{font-family:system-ui,sans-serif;max-width:32rem;margin:2rem auto;padding:0 1rem;line-height:1.5}button{font-size:1.1rem;padding:.8rem 1.2rem}pre{white-space:pre-wrap;background:#eee;padding:1rem;border-radius:8px}</style></head>
+<body><h1>Email test</h1><p>Tap the button. The result appears below.</p>
+<button id="b">Send a test email</button><pre id="o">Waiting...</pre>
+<script>
+document.getElementById('b').onclick=function(){
+  var o=document.getElementById('o');o.textContent='Sending...';
+  fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+    body:JSON.stringify({access_key:'93d663c0-6bf7-4590-a350-df518c41a2eb',subject:'Test from emailtest page',name:'Email test',email:'rexmondhammond@gmail.com',message:'If you can read this, email delivery works.'})})
+  .then(function(r){return r.text().then(function(t){o.textContent='Status: '+r.status+'\n'+t;});})
+  .catch(function(e){o.textContent='Could not reach Web3Forms: '+e;});
+};
+</script></body></html>
