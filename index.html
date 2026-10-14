@@ -543,20 +543,30 @@
       a.style.textDecoration = 'underline';
       return a;
     }
-    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body })
-      .then(function (r) {
-        if (!r.ok) throw new Error('bad status');
+    var saved = fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body })
+      .then(function (r) { return r.ok; }, function () { return false; });
+    var mailed = fd.get('bot-field') ? Promise.resolve(true) : fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        access_key: '93d663c0-6bf7-4590-a350-df518c41a2eb',
+        subject: 'New website message from ' + (fd.get('name') || 'a visitor'),
+        from_name: 'Rex Hammond Data Science Hub',
+        name: fd.get('name'), email: fd.get('email'), topic: fd.get('topic'), message: fd.get('message')
+      })
+    }).then(function (r) { return r.ok; }, function () { return false; });
+    Promise.all([saved, mailed]).then(function (res) {
+      if (res[0] || res[1]) {
         form.reset();
         status.className = 'status ok';
-        status.textContent = 'Thank you. Your message has been received. ';
-        status.appendChild(mailLink('Tap here to also email it to me for a faster reply.'));
-      })
-      .catch(function () {
+        status.textContent = 'Thank you. Your message has been received and I will reply soon.';
+      } else {
         status.className = 'status err';
         status.textContent = 'The message could not be sent. ';
         status.appendChild(mailLink('Tap here to email me directly.'));
-      })
-      .then(function () { send.disabled = false; });
+      }
+      send.disabled = false;
+    });
   });
 
   /* ---------- first paint ---------- */
