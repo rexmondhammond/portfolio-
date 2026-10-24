@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Rexmond Hammond | Business Data Analyst, Accra</title>
-<meta name="description" content="Rexmond Zanzit Hammond is a Business Data Analyst and Data Visualization Specialist in Accra, Ghana, working in Python, R, SQL, Power BI and Tableau.">
+<meta name="description" content="Rexmond Zanzit Hammond is a Business Data Analyst in Accra, Ghana, doing descriptive, diagnostic, predictive and prescriptive analytics with Python, R, SQL, Power BI and Tableau.">
 <meta name="theme-color" content="#0F2A23">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Rexmond Hammond | Business Data Analyst">
-<meta property="og:description" content="Rexmond Zanzit Hammond is a Business Data Analyst and Data Visualization Specialist in Accra, Ghana, working in Python, R, SQL, Power BI and Tableau.">
+<meta property="og:description" content="Rexmond Zanzit Hammond is a Business Data Analyst in Accra, Ghana, doing descriptive, diagnostic, predictive and prescriptive analytics with Python, R, SQL, Power BI and Tableau.">
 <link rel="canonical" href="https://rexhammond-datasciencehub.netlify.app/">
 <meta property="og:url" content="https://rexhammond-datasciencehub.netlify.app/">
 <meta property="og:image" content="https://rexhammond-datasciencehub.netlify.app/assets/og-2.jpg">
@@ -294,6 +294,29 @@
   :root[data-theme="dark"] { --c1: #1AA07A; --c2: #8173E6; --c3: #B58A10; }
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --c1: #1AA07A; --c2: #8173E6; --c3: #B58A10; } }
 
+
+  /* four types of analytics */
+  .an-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr)); gap: 1rem; }
+  .an-card { --acc: var(--c1); background: var(--surface); border: 1.5px solid var(--line); border-radius: 1.3rem; padding: clamp(1.1rem, 3vw, 1.7rem); display: grid; gap: 0.9rem; align-content: start; min-width: 0; position: relative; overflow: hidden; transition: transform 0.25s ease, border-color 0.25s ease; }
+  .an-card::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 5px; background: var(--acc); }
+  .an-card:hover { transform: translateY(-3px); border-color: var(--ink); }
+  .an-head { display: flex; justify-content: space-between; align-items: baseline; gap: 0.8rem; flex-wrap: wrap; }
+  .an-head .n { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--clay); }
+  .an-head .stage { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 0.15rem 0.6rem; }
+  .an-card h3 { font-size: clamp(1.4rem, 1rem + 1.2vw, 1.8rem); font-weight: 900; letter-spacing: -0.03em; line-height: 1.05; }
+  .an-q { font-family: var(--font-display); font-weight: 700; font-size: 1rem; color: var(--brand); letter-spacing: -0.02em; }
+  .an-card > p { color: var(--muted); font-size: 0.99rem; }
+  .an-card .d-box h4 { font-size: 0.88rem; color: var(--muted); font-weight: 600; }
+  .an-key { font-size: 0.78rem; color: var(--muted); margin-top: 0.4rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+  .an-key i { display: inline-block; width: 1.4rem; height: 0; border-top: 2px solid var(--acc); vertical-align: middle; margin-right: 0.4rem; }
+  .an-key i.dsh { border-top-style: dashed; }
+  .an-key i.band { height: 0.7rem; border: 0; background: color-mix(in srgb, var(--acc) 22%, transparent); }
+  .an-insight { background: var(--tint); border-left: 4px solid var(--acc); border-radius: 0.2rem 0.8rem 0.8rem 0.2rem; padding: 0.8rem 1rem; font-weight: 500; }
+  .an-insight .label { display: block; margin-bottom: 0.25rem; color: var(--clay); }
+  .ch .d-fc { fill: none; stroke: var(--acc); stroke-width: 2; stroke-dasharray: 5 4; stroke-linecap: round; }
+  .ch .d-band { fill: var(--acc); opacity: 0.18; }
+  .ch .d-bar.best { opacity: 1; }
+
   /* about */
   .ab { background: var(--panel); color: var(--on-panel); border-radius: 1.8rem; overflow: hidden; position: relative; }
   .ab::after { content: ""; position: absolute; right: -6rem; top: 3rem; width: 22rem; height: 22rem; border-radius: 50%; background: radial-gradient(closest-side, color-mix(in srgb, var(--gold) 22%, transparent), transparent); pointer-events: none; }
@@ -391,7 +414,7 @@
 <noscript><p style="padding:2rem;font-family:sans-serif">This portfolio needs JavaScript. Please contact rexmondhammond@gmail.com.</p></noscript>
 <div id="app" data-root></div>
 
-<script type="application/json" id="site-content">{"meta":{"name":"Rexmond Zanzit Hammond","shortName":"Rexmond Hammond","location":"Accra, Ghana"},"hero":{"headline":"Raw records in. Decisions out.","highlight":"Decisions","intro":"I am a Business Data Analyst and Data Visualization Specialist with an actuarial science background. I turn complex data into clear insight that improves operational efficiency and supports strategic decisions.","tools":["Python","R","SQL","Power BI","Tableau"]},"ticker":["Python","R","SQL","Power BI","Tableau","MS Excel","Data visualization","Actuarial science","AI database systems","Project management","Vibe coding","Design thinking","Prompt engineering","Model thinking"],"services":{"title":"Where I add value to your team","intro":"Four areas where I have hands-on experience, from the first analysis to the systems that keep data reliable.","items":[{"title":"Data analysis","text":"Lead analytics projects that convert raw data into findings managers can use in operational decisions."},{"title":"Dashboards and reporting","text":"Analyze and visualize complex datasets in Power BI and Tableau so results are easy to read and act on."},{"title":"Database and AI tooling","text":"Develop AI-powered database systems that streamline data management and improve workflow efficiency."},{"title":"IT support","text":"Provide IT support that improves system reliability and the everyday experience of users."}]},"work":{"title":"Projects and engagements","items":[{"tag":"National Service · 2024 – 2025","title":"Data analytics and IT support at Ghana Police Service","meta":"ICT Directorate, National Headquarters. Role: Data Analyst & IT Support Personnel.","tools":["Python","R","SQL","Power BI","Tableau"],"points":["Led data analytics projects that converted raw data into insights used to inform operational decisions.","Analyzed and visualized complex datasets using Python, R, Power BI, Tableau and SQL.","Provided critical IT support that improved system reliability and user experience.","Worked with sensitive data in a security-conscious environment."]},{"tag":"Personal project","title":"AI-powered database for a car rental company","meta":"Developed to streamline how a rental business manages its data.","tools":["AI database systems","Data management"],"points":["Developed a database system powered by AI to streamline data management.","Enhanced workflow efficiency for the car rental company."]}]},"path":{"title":"Education and experience","items":[{"when":"2024 – 2025","title":"National Service, Data Analyst & IT Support","text":"Ghana Police Service National Headquarters, ICT Directorate."},{"when":"2021 – 2024","title":"BSc Actuarial Science","text":"University of Ghana. Graduated with Second Class Upper Honours."},{"when":"Earlier","title":"Senior Day Students' Prefect","text":"Achimota School. Organized and led academic committees and student representation roles."}]},"toolkit":{"title":"The tools I work with","groups":[{"name":"Programming","items":["Python","R"]},{"name":"Data visualization","items":["Power BI","Tableau"]},{"name":"Database management","items":["SQL"]},{"name":"Other tools","items":["MS Excel","AI database systems"]}]},"strengths":{"title":"How I work","items":[{"label":"Analysis","title":"Quantitative problem solving","text":"A rigorous, audit-friendly approach to data."},{"label":"Communication","title":"Clear business recommendations","text":"Technical results translated into language decision makers can act on."},{"label":"Integrity","title":"Discipline and ethics","text":"Experience handling sensitive data in security-conscious environments."},{"label":"Growth","title":"Adaptability","text":"A quick learner of new actuarial techniques and tools."}]},"credentials":{"title":"Certifications and achievements","items":[{"title":"Google Data Analytics Certificate","note":"","kind":"certificate"},{"title":"Google Project Management Certificate","note":"","kind":"certificate"},{"title":"Ghana 1000 Program Certificate","note":"Business analytics and data visualization","kind":"certificate"},{"title":"Winner, UGASS Quiz Competition","note":"","kind":"award"},{"title":"Participant, UGASS Data Hackathon","note":"","kind":"participation"}]},"contact":{"title":"Have data that needs a clear answer?","intro":"Tell me about the question you are trying to answer and the data you have. I will get back to you.","email":"rexmondhammond@gmail.com","phone":"+233 50 614 0190","location":"Accra, Ghana","github":"github.com/rexmondhammond","linkedin":"https://www.linkedin.com/in/rexmond-hammond-509468327"},"footer":{"left":"Rexmond Zanzit Hammond","right":"References available on request"},"photo":"assets/photo-2.jpg","cvUrl":"assets/Rexmond_Hammond_CV.pdf","form":true,"about":{"title":"A data analyst who turns data into decisions","highlight":"data into decisions","paragraphs":["I am Rexmond, a data analyst based in Accra. My strength is problem solving: I start with the decision that has to be made, work back to the data that can answer it, and build the analysis that gets there.","My Actuarial Science training at the University of Ghana, where I graduated with Second Class Upper Honours, gave me a rigorous, numbers-first way of thinking about risk and uncertainty.","At the Ghana Police Service ICT Directorate I applied it to turn raw records into insight for operational decisions."],"steps":[{"t":"Frame the problem","d":"Start with the decision that has to be made, then work back to the question the data must answer."},{"t":"Find the insight","d":"Clean and explore the data, test ideas with statistics, and check every result before sharing it."},{"t":"Deliver the decision","d":"Turn findings into dashboards and clear recommendations that people can act on."}],"pillars":[{"t":"Problem solving","d":"Breaking messy questions into clear, answerable parts, with a rigorous, audit-friendly approach shaped by actuarial training.","chips":["Actuarial science","Quantitative analysis"]},{"t":"Insight generation","d":"Exploring and testing data to see what changed, why it matters and what to do next.","chips":["Statistics","Exploratory analysis"]},{"t":"Technical ability","d":"Python, R and SQL for the analysis, Power BI and Tableau for presenting it, and AI tools to build faster.","chips":["Python","R","SQL","Power BI","Tableau"]}],"quote":"Data only matters when it changes a decision.","stats":[{"n":3,"l":"Professional certifications"},{"n":5,"l":"Core analytics tools"},{"n":2,"l":"Competitions entered"}]},"applied":{"title":"How I apply them","intro":"Four ways of working that sit alongside my analytics skills, each with a typical scenario.","items":[{"label":"Build","title":"Vibe coding","text":"I describe what a tool should do in plain language, let AI draft the code, then test, review and refine it until it is reliable.","example":"Turning a weekly Excel report into a small dashboard page that anyone on the team can open."},{"label":"Design","title":"Design thinking","text":"I start with the people who use the data, define the real problem, sketch options, test a quick prototype and improve it.","example":"Asking what decision a report must support, so managers see the four numbers that matter instead of forty."},{"label":"AI","title":"Prompt engineering","text":"I give an AI model a role, the context, the data format and the output I expect, then check its answers against the source data.","example":"Cleaning inconsistent category names in a large dataset with clear rules, then spot-checking the results."},{"label":"Reasoning","title":"Model thinking","text":"I use simple mental models such as trade-offs, feedback loops and expected value to frame a problem before touching the data.","example":"Comparing two options by estimating cost, risk and the likelihood of each outcome, a habit from actuarial training."}]},"dashboards":{"title":"Dashboards I would build","intro":"Three sample dashboards that show how I turn data into a clear view. They use made-up numbers, not figures from any real organisation.","items":[{"id":"desk","tab":"IT support desk","acc":1,"blurb":"Tracks how many requests the team resolves and how fast.","kpis":[{"k":"Tickets resolved","calc":"sum","series":0},{"k":"Avg resolution time","calc":"last","series":1,"suf":" hrs"},{"k":"Faster than January","calc":"pctdrop","series":1}],"line":{"title":"Tickets resolved per month","labels":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"values":[182,195,170,210,224,198,236,251,229,262,248,275],"suf":" tickets"},"series2":[9.4,9.1,9.6,8.7,8.2,8.5,7.6,7.1,7.4,6.8,6.5,6.2],"bars":{"title":"Requests by type (%)","items":[["Hardware",31],["Accounts",27],["Network",22],["Software",20]],"suf":"%"}},{"id":"fleet","tab":"Car rental fleet","acc":2,"blurb":"Shows how well the fleet earns and how often cars are on the road.","kpis":[{"k":"Revenue (year)","calc":"sum","series":0,"pre":"GH₵","suf":"k"},{"k":"Fleet utilisation","calc":"last","series":1,"suf":"%"},{"k":"Revenue growth","calc":"pctgrow","series":0}],"line":{"title":"Revenue per month (GH₵ thousands)","labels":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"values":[84,79,91,98,104,99,112,121,117,128,124,139],"pre":"GH₵","suf":"k"},"series2":[58,55,61,64,67,63,70,74,71,76,73,79],"bars":{"title":"Revenue share by vehicle class (%)","items":[["Economy",38],["SUV",34],["Van",18],["Luxury",10]],"suf":"%"}},{"id":"claims","tab":"Insurance claims","acc":3,"blurb":"Follows how costly claims are compared with premiums, and who claims most.","kpis":[{"k":"Latest loss ratio","calc":"last","series":0,"suf":"%"},{"k":"Best quarter","calc":"min","series":0,"suf":"%"},{"k":"Change over 2 years","calc":"pts","series":0}],"line":{"title":"Loss ratio by quarter (%)","labels":["Q1 Y1","Q2 Y1","Q3 Y1","Q4 Y1","Q1 Y2","Q2 Y2","Q3 Y2","Q4 Y2"],"values":[72,70,74,69,67,65,62,64],"suf":"%"},"series2":null,"bars":{"title":"Claim frequency by age group (%)","items":[["18 to 25",11.8],["26 to 35",8.4],["36 to 45",6.9],["46 to 55",6.1],["56 to 65",7.2],["66 and over",9.0]],"suf":"%"}}]}}</script>
+<script type="application/json" id="site-content">{"meta":{"name":"Rexmond Zanzit Hammond","shortName":"Rexmond Hammond","location":"Accra, Ghana"},"hero":{"headline":"Raw records in. Decisions out.","highlight":"Decisions","intro":"I am a Business Data Analyst and Data Visualization Specialist with an actuarial science background. I turn complex data into clear insight that improves operational efficiency and supports strategic decisions.","tools":["Python","R","SQL","Power BI","Tableau"]},"ticker":["Python","R","SQL","Power BI","Tableau","MS Excel","Data visualization","Actuarial science","AI database systems","Project management","Vibe coding","Design thinking","Prompt engineering","Model thinking","Descriptive analytics","Diagnostic analytics","Predictive analytics","Prescriptive analytics"],"services":{"title":"Where I add value to your team","intro":"Four areas where I have hands-on experience, from the first analysis to the systems that keep data reliable.","items":[{"title":"Data analysis","text":"Lead analytics projects that convert raw data into findings managers can use in operational decisions."},{"title":"Dashboards and reporting","text":"Analyze and visualize complex datasets in Power BI and Tableau so results are easy to read and act on."},{"title":"Database and AI tooling","text":"Develop AI-powered database systems that streamline data management and improve workflow efficiency."},{"title":"IT support","text":"Provide IT support that improves system reliability and the everyday experience of users."}]},"work":{"title":"Projects and engagements","items":[{"tag":"National Service · 2024 – 2025","title":"Data analytics and IT support at Ghana Police Service","meta":"ICT Directorate, National Headquarters. Role: Data Analyst & IT Support Personnel.","tools":["Python","R","SQL","Power BI","Tableau"],"points":["Led data analytics projects that converted raw data into insights used to inform operational decisions.","Analyzed and visualized complex datasets using Python, R, Power BI, Tableau and SQL.","Provided critical IT support that improved system reliability and user experience.","Worked with sensitive data in a security-conscious environment."]},{"tag":"Personal project","title":"AI-powered database for a car rental company","meta":"Developed to streamline how a rental business manages its data.","tools":["AI database systems","Data management"],"points":["Developed a database system powered by AI to streamline data management.","Enhanced workflow efficiency for the car rental company."]}]},"path":{"title":"Education and experience","items":[{"when":"2024 – 2025","title":"National Service, Data Analyst & IT Support","text":"Ghana Police Service National Headquarters, ICT Directorate."},{"when":"2021 – 2024","title":"BSc Actuarial Science","text":"University of Ghana. Graduated with Second Class Upper Honours."},{"when":"Earlier","title":"Senior Day Students' Prefect","text":"Achimota School. Organized and led academic committees and student representation roles."}]},"toolkit":{"title":"The tools I work with","groups":[{"name":"Programming","items":["Python","R"]},{"name":"Data visualization","items":["Power BI","Tableau"]},{"name":"Database management","items":["SQL"]},{"name":"Other tools","items":["MS Excel","AI database systems"]},{"name":"Analytics types","items":["Descriptive","Diagnostic","Predictive","Prescriptive"]}]},"strengths":{"title":"How I work","items":[{"label":"Analysis","title":"Quantitative problem solving","text":"A rigorous, audit-friendly approach to data."},{"label":"Communication","title":"Clear business recommendations","text":"Technical results translated into language decision makers can act on."},{"label":"Integrity","title":"Discipline and ethics","text":"Experience handling sensitive data in security-conscious environments."},{"label":"Growth","title":"Adaptability","text":"A quick learner of new actuarial techniques and tools."}]},"credentials":{"title":"Certifications and achievements","items":[{"title":"Google Data Analytics Certificate","note":"","kind":"certificate"},{"title":"Google Project Management Certificate","note":"","kind":"certificate"},{"title":"Ghana 1000 Program Certificate","note":"Business analytics and data visualization","kind":"certificate"},{"title":"Winner, UGASS Quiz Competition","note":"","kind":"award"},{"title":"Participant, UGASS Data Hackathon","note":"","kind":"participation"}]},"contact":{"title":"Have data that needs a clear answer?","intro":"Tell me about the question you are trying to answer and the data you have. I will get back to you.","email":"rexmondhammond@gmail.com","phone":"+233 50 614 0190","location":"Accra, Ghana","github":"github.com/rexmondhammond","linkedin":"https://www.linkedin.com/in/rexmond-hammond-509468327"},"footer":{"left":"Rexmond Zanzit Hammond","right":"References available on request"},"photo":"assets/photo-2.jpg","cvUrl":"assets/Rexmond_Hammond_CV.pdf","form":true,"about":{"title":"A data analyst who turns data into decisions","highlight":"data into decisions","paragraphs":["I am Rexmond, a data analyst based in Accra. My strength is problem solving: I start with the decision that has to be made, work back to the data that can answer it, and build the analysis that gets there.","My Actuarial Science training at the University of Ghana, where I graduated with Second Class Upper Honours, gave me a rigorous, numbers-first way of thinking about risk and uncertainty.","At the Ghana Police Service ICT Directorate I applied it to turn raw records into insight for operational decisions."],"steps":[{"t":"Frame the problem","d":"Start with the decision that has to be made, then work back to the question the data must answer."},{"t":"Find the insight","d":"Clean and explore the data, test ideas with statistics, and check every result before sharing it."},{"t":"Deliver the decision","d":"Turn findings into dashboards and clear recommendations that people can act on."}],"pillars":[{"t":"Problem solving","d":"Breaking messy questions into clear, answerable parts, with a rigorous, audit-friendly approach shaped by actuarial training.","chips":["Actuarial science","Quantitative analysis"]},{"t":"Insight generation","d":"Exploring and testing data to see what changed, why it matters and what to do next.","chips":["Statistics","Exploratory analysis"]},{"t":"Technical ability","d":"Python, R and SQL for the analysis, Power BI and Tableau for presenting it, and AI tools to build faster.","chips":["Python","R","SQL","Power BI","Tableau"]}],"quote":"Data only matters when it changes a decision.","stats":[{"n":3,"l":"Professional certifications"},{"n":5,"l":"Core analytics tools"},{"n":2,"l":"Competitions entered"}]},"applied":{"title":"How I apply them","intro":"Four ways of working that sit alongside my analytics skills, each with a typical scenario.","items":[{"label":"Build","title":"Vibe coding","text":"I describe what a tool should do in plain language, let AI draft the code, then test, review and refine it until it is reliable.","example":"Turning a weekly Excel report into a small dashboard page that anyone on the team can open."},{"label":"Design","title":"Design thinking","text":"I start with the people who use the data, define the real problem, sketch options, test a quick prototype and improve it.","example":"Asking what decision a report must support, so managers see the four numbers that matter instead of forty."},{"label":"AI","title":"Prompt engineering","text":"I give an AI model a role, the context, the data format and the output I expect, then check its answers against the source data.","example":"Cleaning inconsistent category names in a large dataset with clear rules, then spot-checking the results."},{"label":"Reasoning","title":"Model thinking","text":"I use simple mental models such as trade-offs, feedback loops and expected value to frame a problem before touching the data.","example":"Comparing two options by estimating cost, risk and the likelihood of each outcome, a habit from actuarial training."}]},"dashboards":{"title":"Dashboards I would build","intro":"Three sample dashboards that show how I turn data into a clear view. They use made-up numbers, not figures from any real organisation.","items":[{"id":"desk","tab":"IT support desk","acc":1,"blurb":"Tracks how many requests the team resolves and how fast.","kpis":[{"k":"Tickets resolved","calc":"sum","series":0},{"k":"Avg resolution time","calc":"last","series":1,"suf":" hrs"},{"k":"Faster than January","calc":"pctdrop","series":1}],"line":{"title":"Tickets resolved per month","labels":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"values":[182,195,170,210,224,198,236,251,229,262,248,275],"suf":" tickets"},"series2":[9.4,9.1,9.6,8.7,8.2,8.5,7.6,7.1,7.4,6.8,6.5,6.2],"bars":{"title":"Requests by type (%)","items":[["Hardware",31],["Accounts",27],["Network",22],["Software",20]],"suf":"%"}},{"id":"fleet","tab":"Car rental fleet","acc":2,"blurb":"Shows how well the fleet earns and how often cars are on the road.","kpis":[{"k":"Revenue (year)","calc":"sum","series":0,"pre":"GH₵","suf":"k"},{"k":"Fleet utilisation","calc":"last","series":1,"suf":"%"},{"k":"Revenue growth","calc":"pctgrow","series":0}],"line":{"title":"Revenue per month (GH₵ thousands)","labels":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"values":[84,79,91,98,104,99,112,121,117,128,124,139],"pre":"GH₵","suf":"k"},"series2":[58,55,61,64,67,63,70,74,71,76,73,79],"bars":{"title":"Revenue share by vehicle class (%)","items":[["Economy",38],["SUV",34],["Van",18],["Luxury",10]],"suf":"%"}},{"id":"claims","tab":"Insurance claims","acc":3,"blurb":"Follows how costly claims are compared with premiums, and who claims most.","kpis":[{"k":"Latest loss ratio","calc":"last","series":0,"suf":"%"},{"k":"Best quarter","calc":"min","series":0,"suf":"%"},{"k":"Change over 2 years","calc":"pts","series":0}],"line":{"title":"Loss ratio by quarter (%)","labels":["Q1 Y1","Q2 Y1","Q3 Y1","Q4 Y1","Q1 Y2","Q2 Y2","Q3 Y2","Q4 Y2"],"values":[72,70,74,69,67,65,62,64],"suf":"%"},"series2":null,"bars":{"title":"Claim frequency by age group (%)","items":[["18 to 25",11.8],["26 to 35",8.4],["36 to 45",6.9],["46 to 55",6.1],["56 to 65",7.2],["66 and over",9.0]],"suf":"%"}}]},"analytics":{"title":"I work across all four types of analytics","intro":"Each type answers a different question, from what happened to what to do next. Here is each one, shown with the same sample IT support desk data. The numbers are made up to illustrate the method.","items":[{"key":"descriptive","stage":"Hindsight","name":"Descriptive","question":"What happened?","text":"I summarise past data into clear numbers, trends and dashboards, so everyone sees the same picture of performance.","tools":["SQL","Excel","Power BI","Tableau"],"chartTitle":"Tickets resolved per month"},{"key":"diagnostic","stage":"Insight","name":"Diagnostic","question":"Why did it happen?","text":"I dig into the numbers to find causes, by drilling down, comparing groups and testing how measures relate to each other.","tools":["SQL","Python","R","Statistical tests"],"bars":{"title":"Causes of slow tickets (%)","items":[["Parts delays",38],["Password backlog",24],["Network outages",21],["Training gaps",17]],"suf":"%"}},{"key":"predictive","stage":"Foresight","name":"Predictive","question":"What is likely to happen?","text":"I use trends and statistical models to forecast what is likely next, with a range that shows how uncertain the forecast is.","tools":["Python","R","Regression","Forecasting"],"chartTitle":"Tickets per month, with a 3-month forecast"},{"key":"prescriptive","stage":"Action","name":"Prescriptive","question":"What should we do?","text":"I compare the options and their likely outcomes, then recommend the action that best fits the goal and the limits.","tools":["Scenario analysis","Python","Excel","Optimisation"],"bars":{"title":"Projected average resolution time (hours)","items":[["Do nothing",6.2],["Add a technician",5.1],["Self-service resets",5.4],["Both together",4.3]],"suf":" hrs","best":3}}]}}</script>
 
 <script>
 (function () {
@@ -440,7 +463,7 @@
   }
 
   function bar(show) {
-    var nav = [['about', 'About'], ['services', 'Services'], ['work', 'Work'], ['dashboards', 'Dashboards'], ['path', 'Path'], ['toolkit', 'Toolkit'], ['credentials', 'Credentials']]
+    var nav = [['about', 'About'], ['services', 'Services'], ['work', 'Work'], ['analytics', 'Analytics'], ['dashboards', 'Dashboards'], ['path', 'Path'], ['toolkit', 'Toolkit'], ['credentials', 'Credentials']]
       .filter(function (n) { return show[n[0]]; })
       .map(function (n) { return '<a class="l" href="#' + n[0] + '">' + n[1] + '</a>'; }).join('');
     var initial = esc((C.meta.shortName || C.meta.name || 'R').trim().charAt(0).toUpperCase());
@@ -688,7 +711,7 @@
   function drawBars(el, d) {
     var B = d.bars, items = B.items, n = items.length;
     var W = Math.max(260, el.clientWidth), rowH = 36, H = n * rowH + 6;
-    var labW = Math.min(112, Math.round(W * 0.34)), right = 48;
+    var labW = Math.min(150, Math.round(W * 0.42)), right = 48;
     var mx = Math.max.apply(null, items.map(function (x) { return x[1]; }));
     var scale = (W - labW - right) / mx;
     var svg = se('svg', { 'class': 'ch', viewBox: '0 0 ' + W + ' ' + H, role: 'img', 'aria-label': B.title + '. Sample data.' });
@@ -697,7 +720,7 @@
       var y = 3 + i * rowH, h = 20, w = Math.max(6, it[1] * scale), r = 4, x0 = labW;
       svg.appendChild(se('text', { 'class': 'rl', x: 0, y: y + h / 2 + 4 }, it[0]));
       var path = 'M' + x0 + ' ' + y + 'h' + (w - r) + 'a' + r + ' ' + r + ' 0 0 1 ' + r + ' ' + r + 'v' + (h - 2 * r) + 'a' + r + ' ' + r + ' 0 0 1 -' + r + ' ' + r + 'h-' + (w - r) + 'z';
-      var bar = se('path', { 'class': 'd-bar', d: path });
+      var bar = se('path', { 'class': 'd-bar' + (B.best != null ? (i === B.best ? ' best' : ' dim') : ''), d: path });
       svg.appendChild(bar);
       svg.appendChild(se('text', { 'class': 'vl', x: x0 + w + 8, y: y + h / 2 + 4 }, fmtNum(it[1], '', B.suf)));
       var hit = se('rect', { x: 0, y: y - 6, width: W, height: rowH, fill: 'transparent' });
@@ -723,7 +746,7 @@
   var resizeTimer = 0, lastW = 0;
   window.addEventListener('resize', function () {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function () { if (window.innerWidth !== lastW) { lastW = window.innerWidth; drawCharts(); } }, 150);
+    resizeTimer = setTimeout(function () { if (window.innerWidth !== lastW) { lastW = window.innerWidth; drawCharts(); drawAnalytics(); } }, 150);
   });
   document.addEventListener('click', function (e) {
     var b = e.target.closest ? e.target.closest('[data-dash]') : null;
@@ -733,6 +756,97 @@
     document.getElementById('dash-slot').innerHTML = dashPanel(dashIdx);
     drawCharts();
   });
+
+
+  /* ---------- the four types of analytics ---------- */
+  function deskLine() { return C.dashboards.items[0].line; }
+  function regress(vals) {
+    var n = vals.length, sx = 0, sy = 0, sxy = 0, sxx = 0, i;
+    for (i = 0; i < n; i++) { sx += i; sy += vals[i]; sxy += i * vals[i]; sxx += i * i; }
+    var b = (n * sxy - sx * sy) / (n * sxx - sx * sx), a = (sy - b * sx) / n, ss = 0;
+    for (i = 0; i < n; i++) ss += Math.pow(vals[i] - (a + b * i), 2);
+    return { a: a, b: b, sd: Math.sqrt(ss / (n - 2)) };
+  }
+  function forecastOf(vals, m) {
+    var r = regress(vals), n = vals.length, out = [];
+    for (var k = 0; k < m; k++) {
+      var x = n + k, v = r.a + r.b * x, w = 1.6 * r.sd * Math.sqrt(1 + 1 / n + Math.pow(x - (n - 1) / 2, 2) / 1);
+      w = 1.6 * r.sd * (1 + 0.18 * (k + 1));
+      out.push({ v: v, lo: v - w, hi: v + w });
+    }
+    return out;
+  }
+  function analyticsInsight(it) {
+    var L = deskLine(), v = L.values;
+    if (it.key === 'descriptive') return 'Tickets resolved grew from ' + fmtNum(v[0]) + ' in ' + L.labels[0] + ' to ' + fmtNum(v[v.length - 1]) + ' in ' + L.labels[v.length - 1] + '.';
+    if (it.key === 'diagnostic') { var b = it.bars.items[0]; return b[0] + ' caused the largest share of slow tickets (' + b[1] + '%), so that is where to look first.'; }
+    if (it.key === 'predictive') { var f = forecastOf(v, 3), last = f[f.length - 1]; return 'If the trend holds, the desk could handle about ' + fmtNum(Math.round(last.v)) + ' tickets a month within three months (likely range ' + fmtNum(Math.round(last.lo)) + ' to ' + fmtNum(Math.round(last.hi)) + ').'; }
+    var bi = it.bars.items, base = bi[0][1], best = bi[it.bars.best];
+    return 'Doing both together gives the biggest drop, from ' + base + ' to ' + best[1] + ' hours, so that is the option I would recommend.';
+  }
+  function analytics() {
+    var A = C.analytics;
+    return '<section id="analytics">' + sectionHead('Analytics', A.title, A.intro) + '<div class="an-grid">' +
+      arr(A.items).map(function (it, i) {
+        var chart = it.key === 'predictive' ? 'an-fc' : it.bars ? 'an-bars' : 'an-line';
+        return '<article class="an-card"><div class="an-head"><span class="n">0' + (i + 1) + ' / 04</span><span class="stage">' + esc(it.stage) + '</span></div>' +
+          '<h3>' + esc(it.name) + '</h3><p class="an-q">' + esc(it.question) + '</p><p>' + esc(it.text) + '</p>' +
+          '<div class="d-box"><h4>' + esc(it.chartTitle || it.bars.title) + ' (sample data)</h4><div class="d-wrap" data-an="' + chart + '" data-i="' + i + '"></div>' +
+          (it.key === 'predictive' ? '<div class="an-key"><span><i></i>Actual</span><span><i class="dsh"></i>Forecast</span><span><i class="band"></i>Likely range</span></div>' : '') + '</div>' +
+          '<div class="chips">' + chipList(it.tools) + '</div>' +
+          '<div class="an-insight"><span class="label">Sample insight</span>' + esc(analyticsInsight(it)) + '</div></article>';
+      }).join('') + '</div></section>';
+  }
+  function drawForecast(el, it) {
+    var L = deskLine(), vals = L.values, n = vals.length, F = forecastOf(vals, 3), m = F.length, tot = n + m;
+    var labels = L.labels.concat(['Jan', 'Feb', 'Mar']);
+    var W = Math.max(260, el.clientWidth), H = 230, pad = { l: 40, r: 16, t: 14, b: 28 };
+    var all = vals.concat(F.map(function (f) { return f.hi; }), F.map(function (f) { return f.lo; }));
+    var mn = Math.min.apply(null, all), mx = Math.max.apply(null, all);
+    var lo = mn - (mx - mn) * 0.1, hi = mx + (mx - mn) * 0.08, step = niceStep((hi - lo) / 4);
+    var y0 = Math.floor(lo / step) * step, y1 = Math.ceil(hi / step) * step;
+    var X = function (i) { return pad.l + (W - pad.l - pad.r) * i / (tot - 1); };
+    var Y = function (v) { return pad.t + (H - pad.t - pad.b) * (1 - (v - y0) / (y1 - y0)); };
+    var svg = se('svg', { 'class': 'ch', viewBox: '0 0 ' + W + ' ' + H, role: 'img', 'aria-label': 'Tickets per month with a three-month forecast. Sample data.' });
+    for (var t = y0; t <= y1 + 1e-9; t += step) {
+      svg.appendChild(se('line', { 'class': 'gl', x1: pad.l, x2: W - pad.r, y1: Y(t), y2: Y(t) }));
+      svg.appendChild(se('text', { 'class': 'tx', x: pad.l - 8, y: Y(t) + 4, 'text-anchor': 'end' }, fmtNum(t, '', '')));
+    }
+    var every = Math.ceil(tot / Math.max(2, Math.floor((W - pad.l - pad.r) / 52)));
+    labels.forEach(function (lb, i) {
+      if (i % every === 0 || i === tot - 1) svg.appendChild(se('text', { 'class': 'tx', x: X(i), y: H - 8, 'text-anchor': i === 0 ? 'start' : i === tot - 1 ? 'end' : 'middle' }, lb));
+    });
+    var up = F.map(function (f, k) { return (k ? 'L' : 'M') + X(n + k).toFixed(1) + ' ' + Y(f.hi).toFixed(1); });
+    var dn = F.map(function (f, k) { return 'L' + X(n + m - 1 - k).toFixed(1) + ' ' + Y(F[m - 1 - k].lo).toFixed(1); });
+    svg.appendChild(se('path', { 'class': 'd-band', d: 'M' + X(n - 1).toFixed(1) + ' ' + Y(vals[n - 1]).toFixed(1) + ' ' + up.join(' ').replace(/^M/, 'L') + ' ' + dn.join(' ') + ' Z' }));
+    svg.appendChild(se('path', { 'class': 'd-line', d: vals.map(function (v, i) { return (i ? 'L' : 'M') + X(i).toFixed(1) + ' ' + Y(v).toFixed(1); }).join(' ') }));
+    svg.appendChild(se('path', { 'class': 'd-fc', d: 'M' + X(n - 1).toFixed(1) + ' ' + Y(vals[n - 1]).toFixed(1) + ' ' + F.map(function (f, k) { return 'L' + X(n + k).toFixed(1) + ' ' + Y(f.v).toFixed(1); }).join(' ') }));
+    svg.appendChild(se('circle', { 'class': 'd-dot', cx: X(n - 1), cy: Y(vals[n - 1]), r: 4.5 }));
+    var hov = se('circle', { 'class': 'd-dot', r: 5, opacity: 0 }); svg.appendChild(hov);
+    var hit = se('rect', { x: pad.l, y: 0, width: W - pad.l - pad.r, height: H, fill: 'transparent' }); svg.appendChild(hit);
+    el.appendChild(svg);
+    var tip = document.createElement('div'); tip.className = 'd-tip'; el.appendChild(tip);
+    function move(ev) {
+      var r = svg.getBoundingClientRect(), x = (ev.clientX - r.left) * (W / r.width);
+      var i = Math.max(0, Math.min(tot - 1, Math.round((x - pad.l) / ((W - pad.l - pad.r) / (tot - 1)))));
+      var isF = i >= n, v = isF ? F[i - n].v : vals[i];
+      hov.setAttribute('cx', X(i)); hov.setAttribute('cy', Y(v)); hov.setAttribute('opacity', 1);
+      tip.textContent = isF ? labels[i] + ' forecast: ' + fmtNum(Math.round(v)) + ' (' + fmtNum(Math.round(F[i - n].lo)) + ' to ' + fmtNum(Math.round(F[i - n].hi)) + ')'
+                            : labels[i] + ': ' + fmtNum(v) + ' tickets';
+      tip.style.left = Math.max(115, Math.min(W - 115, X(i))) + 'px'; tip.style.top = Y(v) + 'px'; tip.className = 'd-tip on';
+    }
+    hit.addEventListener('pointermove', move); hit.addEventListener('pointerdown', move);
+    hit.addEventListener('pointerleave', function () { hov.setAttribute('opacity', 0); tip.className = 'd-tip'; });
+  }
+  function drawAnalytics() {
+    Array.prototype.forEach.call(document.querySelectorAll('[data-an]'), function (el) {
+      var it = C.analytics.items[parseInt(el.getAttribute('data-i'), 10)], kind = el.getAttribute('data-an');
+      el.innerHTML = '';
+      if (kind === 'an-line') drawLine(el, { line: deskLine() });
+      else if (kind === 'an-fc') drawForecast(el, it);
+      else drawBars(el, { bars: it.bars });
+    });
+  }
 
   function contactForm() {
     return '<form class="form" id="contact-form" name="contact" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">' +
@@ -779,10 +893,10 @@
       toolkit: arr(C.toolkit.groups).length > 0,
       strengths: arr(C.strengths.items).length > 0,
       credentials: arr(C.credentials.items).length > 0,
-      about: !!C.about, applied: !!C.applied, dashboards: !!C.dashboards
+      analytics: !!C.analytics, about: !!C.about, applied: !!C.applied, dashboards: !!C.dashboards
     };
     var html = bar(show) + '<div class="wrap" id="top">' + hero(show) + '<div id="signal-slot"></div>' + ticker() +
-      (show.about ? about() : '') + (show.services ? services() : '') + (show.work ? work() : '') + (show.dashboards ? dashboards() : '') + (show.applied ? applied() : '') + (show.path ? path() : '') +
+      (show.about ? about() : '') + (show.services ? services() : '') + (show.work ? work() : '') + (show.analytics ? analytics() : '') + (show.dashboards ? dashboards() : '') + (show.applied ? applied() : '') + (show.path ? path() : '') +
       (show.toolkit ? toolkit() : '') + (show.strengths ? strengths() : '') + (show.credentials ? credentials() : '') +
       contact() +
       '<footer><span>' + esc(C.footer.left) + '</span><span>' + esc(C.footer.right) + '</span></footer></div>';
@@ -795,7 +909,8 @@
     lastW = window.innerWidth;
     initAbout();
     drawCharts();
-    if (window.requestAnimationFrame) requestAnimationFrame(drawCharts);
+    drawAnalytics();
+    if (window.requestAnimationFrame) requestAnimationFrame(function () { drawCharts(); drawAnalytics(); });
   }
 
   /* ---------- behaviour that lives in the page ---------- */
