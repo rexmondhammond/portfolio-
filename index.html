@@ -399,6 +399,14 @@
   .d-tbl table { border-collapse: collapse; width: 100%; margin-top: 0.4rem; }
   .d-tbl th, .d-tbl td { text-align: left; padding: 0.3rem 0.5rem; border-bottom: 1px solid var(--line); }
   .d-tbl th { font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 500; }
+
+.reach{display:flex;gap:.5rem;margin-top:.6rem;flex-wrap:wrap}
+.rb{display:inline-flex;align-items:center;min-height:40px;padding:.45rem 1rem;border-radius:999px;border:1px solid currentColor;font-weight:600;font-size:.9rem;text-decoration:none;color:inherit}
+.rb-wa{background:#1F8F4E;border-color:#1F8F4E;color:#fff}
+.rb:hover{opacity:.85}
+.wa-fab{position:fixed;right:16px;bottom:16px;z-index:50;display:inline-flex;align-items:center;gap:.5rem;min-height:48px;padding:.6rem 1rem;border-radius:999px;background:#1F8F4E;color:#fff;font-weight:600;font-size:.9rem;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.wa-fab:hover{opacity:.9}
+@media (max-width:520px){.wa-fab span{display:none}.wa-fab{padding:.8rem}}
 </style>
 <script>
   (function () {
@@ -860,18 +868,19 @@
       '<button class="btn btn-gold" type="submit" id="f-send">Send message</button><p class="status" id="f-status" role="status" aria-live="polite"></p></form>';
   }
 
+  function digits(n) { return String(n || '').replace(/\D/g, ''); }
   function contact() {
     var c = C.contact;
     var rows = '<div class="rows"' + (C.form ? ' style="margin-top:2rem"' : '') + '>' +
       (c.email ? '<div class="row"><div><div class="k">Email</div><div class="v" id="v-email">' + esc(c.email) + '</div></div><button class="copy" type="button" data-target="v-email">Copy</button></div>' : '') +
-      (c.phone ? '<div class="row"><div><div class="k">Phone</div><div class="v" id="v-phone">' + esc(c.phone) + '</div></div><button class="copy" type="button" data-target="v-phone">Copy</button></div>' : '') +
+      (c.phone ? '<div class="row"><div><div class="k">Phone and WhatsApp</div><div class="v" id="v-phone">' + esc(c.phone) + '</div><div class="reach"><a class="rb" href="tel:+' + digits(c.phone) + '">Call</a><a class="rb rb-wa" href="https://wa.me/' + digits(c.phone) + '?text=' + encodeURIComponent('Hello Rexmond, I found your portfolio website.') + '" target="_blank" rel="noopener">WhatsApp</a></div></div><button class="copy" type="button" data-target="v-phone">Copy</button></div>' : '') +
       (c.github ? '<div class="row"><div><div class="k">GitHub</div><div class="v"><a href="https://' + esc(c.github) + '" target="_blank" rel="noopener" style="color:inherit">' + esc(c.github) + '</a></div></div></div>' : '') +
       (c.linkedin ? '<div class="row"><div><div class="k">LinkedIn</div><div class="v"><a href="' + esc(c.linkedin) + '" target="_blank" rel="noopener" style="color:inherit">Rexmond Hammond</a></div></div></div>' : '') +
       (c.location ? '<div class="row"><div><div class="k">Based in</div><div class="v">' + esc(c.location) + '</div></div></div>' : '') + '</div>';
     var left = '<div><p class="label">Contact</p><h2 style="margin-top:1rem">' + esc(c.title) + '</h2><p class="sub">' + esc(c.intro) + '</p>' +
       (C.form ? rows : (c.email ? '<div class="cta"><a class="btn btn-gold" href="mailto:' + esc(c.email) + '">Email me' + ARROW + '</a></div>' : '')) + '</div>';
     return '<section id="contact" style="padding-block:0"><div class="contact"><div class="kente" aria-hidden="true"></div><div class="contact-in">' +
-      left + (C.form ? contactForm() : rows) + '</div></div></section>';
+      left + (C.form ? contactForm() : rows) + '</div></div></section>' + (c.phone ? '<a class="wa-fab" href="https://wa.me/' + digits(c.phone) + '?text=' + encodeURIComponent('Hello Rexmond, I found your portfolio website.') + '" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5A8.5 8.5 0 1 1 21 11.5z"/></svg><span>WhatsApp</span></a>' : '');
   }
 
   /* ---------- render ---------- */
